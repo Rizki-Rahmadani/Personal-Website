@@ -1,102 +1,118 @@
+"use client";
+
 import Image from "next/image";
+import Navbar from "./compponents/navbar";
+import PortfolioPage from "./compponents/projects";
+import { FaInstagram, FaLinkedin, FaSquareGithub } from "react-icons/fa6";
+import { useEffect, useState } from "react";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const [roleIndex, setRoleIndex] = useState<number>(0);
+  const roles = ["Full Stack", "Frontend", "Backend"];
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  useEffect(() => {
+    const roleTimer = setInterval(() => {
+      setRoleIndex((prev) => (prev + 1) % roles.length)
+    }, 5000)
+
+    return () => clearInterval(roleTimer)
+  })
+
+  return (
+    <div>
+      <Navbar />
+      <div id="" className="container-full h-screen flex flex-col md:flex-row justify-center items-center px-5 md:px-20">
+        <div className="w-full md:w-1/2 flex flex-col justify-between text-justify md:text-start sm:text-start gap-5">
+          <div className="space-y-3">
+            <p className="text-2xl">Welcome to my world</p>
+            <div className="space-y-1 font-bold">
+              <h1 className="text-4xl md:text-6xl">Hi, I'm Rizki Rahmadani</h1>
+              <h1 className="text-4xl md:text-6xl ">
+                a{" "}
+                <span className="text-amber-600 ">
+                  <span className="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-3 before:bg-amber-600">
+                    <span className="relative text-white">{roles[roleIndex]}</span>
+                  </span>
+                  Developer
+                </span>
+              </h1>
+            </div>
+            <div className="pt-2">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Consequuntur eveniet aut hic suscipit recusandae tempore
+                necessitatibus doloremque debitis mollitia, neque cum temporibus
+                animi illum, libero repudiandae, consectetur quo amet laborum.
+              </p>
+            </div>
+            <div className="gap-5 flex flex-col md:flex-row">
+              <div>
+                <button className="bg-amber-600 p-2 rounded-lg w-full md:w-auto">
+                  Hire Me
+                </button>
+              </div>
+              <div>
+                <button className="bg-amber-600 p-2 rounded-lg w-full md:w-auto">
+                  Download Resume
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="space-y-5">
+            <p>FIND ME ON :</p>
+            <div className="flex gap-5">
+              <div className="rounded-full hover:-translate-y-1">
+                <a
+                  href="https://www.linkedin.com/in/Rizki-Rahmadani-/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaLinkedin size={'50px'} />
+                </a>
+              </div>
+              <div className="rounded-full hover:-translate-y-1">
+                <a
+                  href="https://www.instagram.com/____rizki._"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaInstagram size={'50px'} />
+                </a>
+              </div>
+              <div className="rounded-full hover:-translate-y-1">
+                <a
+                  href="https://github.com/Rizki-Rahmadani"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaSquareGithub size={'50px'} />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+
+        <div className="w-full md:w-1/2 h-auto flex justify-center md:justify-end relative">
+          <div className="absolute w-100 h-100 md:w-140 md:h-140 rounded-full bg-amber-600 -z-10 bottom-1 -right-1"></div>
+          {/* <div className="absolute w-100 h-100 md:w-70 md:h-70 rounded-full bg-amber-600 -z-10 top-1 left-50"></div> */}
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src="/assets/PP.png"
+            width={550}
+            height={350}
+            alt="Rizki Rahmadani"
+            className="object-cover rounded-full"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+        </div>
+      </div>
+      <PortfolioPage/>
+      {/* Footer */}
+      <footer className=" border-t-1 py-5 mt-16">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-white">
+            © {new Date().getFullYear()} Rizki Rahmadani. All rights reserved.
+          </p>
+          <p className="text-white">Powered by Next.Js</p>
+        </div>
       </footer>
     </div>
   );
