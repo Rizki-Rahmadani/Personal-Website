@@ -1,36 +1,19 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
 import React, { useState } from "react";
+import projectsData from '@/lib/data/projects.json'
 
 const PortfolioPage = () => {
   const [isHovered, setIsHovered] = useState<number | null>(null);
-  const projects = [
-    {
-      id: 1,
-      title: "Circle App",
-      image: "../../../assets/portofolio/circle-app.jpg",
-      description:
-        "A project that showcases the use of React and Tailwind CSS for building a responsive UI.",
-      link: "https://circle-app-frontend.vercel.app/",
-    },
-    {
-      id: 2,
-      title: "Lakoe App",
-      image: "../../../assets/portofolio/lakoe-app.jpg",
-      description:
-        "A project that showcases the use of React and Tailwind CSS for building a responsive UI.",
-      link: "https://lakoe-app-three.vercel.app/login",
-    },
-  ];
+  
 
   return (
     <div id="projects" className="portfolio-container">
       <h1 className="text-4xl font-bold text-center">MY PROJECTS</h1>
       <div className="flex flex-wrap justify-center gap-10 p-10">
-        {projects.map((project) => (
+        {projectsData.projects.map((project) => (
           <Card
             key={project.id}
             className="overflow-hidden p-10 flex justify-center "

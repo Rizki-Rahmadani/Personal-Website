@@ -4,8 +4,8 @@ const Navbar = () => {
         <ul className="flex gap-10 text-lg">
           <li><a href="#" className="hover:text-amber-600">Home</a></li>
           <li><a href="#projects" className="hover:text-amber-600">Portofolio</a></li>
-          <li><a href="/about" className="hover:text-amber-600">About</a></li>
-          <li><a href="/contact" className="hover:text-amber-600">Contact</a></li>
+          <li><a href="#about" className="hover:text-amber-600">About</a></li>
+          <li><a href="#contact" className="hover:text-amber-600">Contact</a></li>
         </ul>
     </div>
   );

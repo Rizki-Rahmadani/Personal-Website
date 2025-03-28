@@ -3,25 +3,62 @@
 import Image from "next/image";
 import Navbar from "./compponents/navbar";
 import PortfolioPage from "./compponents/projects";
-import { FaInstagram, FaLinkedin, FaSquareGithub } from "react-icons/fa6";
+import {
+  FaInstagram,
+  FaLinkedin,
+  FaNodeJs,
+  FaReact,
+  FaSquareGithub,
+} from "react-icons/fa6";
 import { useEffect, useState } from "react";
+import AboutMe from "./compponents/about";
+import { TbBrandNextjs, TbBrandTypescript } from "react-icons/tb";
+import { SiExpress, SiPostgresql } from "react-icons/si";
+import { RiTailwindCssLine } from "react-icons/ri";
+import techStackData from "@/lib/data/techStack.json";
 
 export default function Home() {
   const [roleIndex, setRoleIndex] = useState<number>(0);
   const roles = ["Full Stack", "Frontend", "Backend"];
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   useEffect(() => {
     const roleTimer = setInterval(() => {
-      setRoleIndex((prev) => (prev + 1) % roles.length)
-    }, 5000)
+      setRoleIndex((prev) => (prev + 1) % roles.length);
+    }, 5000);
 
-    return () => clearInterval(roleTimer)
-  })
+    return () => clearInterval(roleTimer);
+  });
+
+  const iconComponents = {
+    FaReact,
+    FaNodeJs,
+    TbBrandTypescript,
+    SiExpress,
+    SiPostgresql,
+    RiTailwindCssLine,
+    TbBrandNextjs,
+  };
+
+  const handleHireMe = async (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    setTimeout(() => {
+      setIsLoading(false);
+
+      window.location.href =
+        "mailto:rzkrhmdn7@gmail.com?subject=Hiring%20Inquiry%20for%20Rizki%20Rahmadani%20-%20Full%20Stack%20Developer&body=Hi%20Rizki%20Rahmadani,%0D%0A%0D%0AI%27m%20interested%20in%20working%20with%20you.%20Let%27s%20discuss%20the%20details!";
+    }, 1500);
+  };
 
   return (
     <div>
       <Navbar />
-      <div id="" className="container-full h-screen flex flex-col md:flex-row justify-center items-center px-5 md:px-20">
+      <div
+        id=""
+        className="container-full h-screen flex flex-col md:flex-row justify-center items-center px-5 md:px-20"
+      >
         <div className="w-full md:w-1/2 flex flex-col justify-between text-justify md:text-start sm:text-start gap-5">
           <div className="space-y-3">
             <p className="text-2xl">Welcome to my world</p>
@@ -31,7 +68,9 @@ export default function Home() {
                 a{" "}
                 <span className="text-amber-600 ">
                   <span className="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-3 before:bg-amber-600">
-                    <span className="relative text-white">{roles[roleIndex]}</span>
+                    <span className="relative text-white">
+                      {roles[roleIndex]}
+                    </span>
                   </span>
                   Developer
                 </span>
@@ -39,55 +78,79 @@ export default function Home() {
             </div>
             <div className="pt-2">
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Consequuntur eveniet aut hic suscipit recusandae tempore
-                necessitatibus doloremque debitis mollitia, neque cum temporibus
-                animi illum, libero repudiandae, consectetur quo amet laborum.
+                Developing skills in building modern web applications,
+                integrating frontend and backend, and mastering Full Stack
+                Development concepts. Focusing on real-world projects to build a
+                portfolio and be prepared for challenges in the tech industry.
               </p>
             </div>
-            <div className="gap-5 flex flex-col md:flex-row">
+            <div className="py-5 gap-5 flex flex-col md:flex-row">
               <div>
-                <button className="bg-amber-600 p-2 rounded-lg w-full md:w-auto">
-                  Hire Me
-                </button>
+                <a
+                  href="#"
+                  onClick={handleHireMe}
+                  className={`text-xl bg-amber-600 p-2 rounded-lg w-full md:w-auto cursor-pointer hover:bg-white hover:text-amber-600 flex items-center justify-center gap-2 ${
+                    isLoading ? "opacity-50 cursor-not-allowed" : ""
+                  }`}
+                >
+                  {isLoading ? (
+                    <>
+                      <svg
+                        className="animate-spin h-5 w-5 text-white"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle
+                          className="opacity-25"
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                        ></circle>
+                        <path
+                          className="opacity-75"
+                          fill="currentColor"
+                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                        ></path>
+                      </svg>
+                      <span>Loading...</span>
+                    </>
+                  ) : (
+                    "Hire Me"
+                  )}
+                </a>
               </div>
               <div>
-                <button className="bg-amber-600 p-2 rounded-lg w-full md:w-auto">
+                <a
+                  href="/assets/portofolio/CV_Rizki-Rahmadani.pdf"
+                  className="text-xl bg-amber-600 p-2 rounded-lg w-full md:w-auto cursor-pointer hover:bg-white hover:text-amber-600 flex items-center justify-center"
+                >
                   Download Resume
-                </button>
+                </a>
               </div>
             </div>
           </div>
-          <div className="space-y-5">
-            <p>FIND ME ON :</p>
-            <div className="flex gap-5">
-              <div className="rounded-full hover:-translate-y-1">
-                <a
-                  href="https://www.linkedin.com/in/Rizki-Rahmadani-/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaLinkedin size={'50px'} />
-                </a>
-              </div>
-              <div className="rounded-full hover:-translate-y-1">
-                <a
-                  href="https://www.instagram.com/____rizki._"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaInstagram size={'50px'} />
-                </a>
-              </div>
-              <div className="rounded-full hover:-translate-y-1">
-                <a
-                  href="https://github.com/Rizki-Rahmadani"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaSquareGithub size={'50px'} />
-                </a>
-              </div>
+          <div className="space-y-3">
+            <p className="text-xl">TECH STACK:</p>
+            <div className="flex gap-4">
+              {techStackData.techStack.map(
+                (stack: { icon: string; color: string }, index: number) => {
+                  const IconComponent =
+                    iconComponents[stack.icon as keyof typeof iconComponents];
+                  return (
+                    <div
+                      key={index}
+                      className="bg-white hover:-translate-y-1 p-0.5 rounded-md"
+                    >
+                      <IconComponent
+                        className={`w-12 h-12 text-[${stack.color}]`}
+                      />
+                    </div>
+                  );
+                }
+              )}
             </div>
           </div>
         </div>
@@ -104,7 +167,8 @@ export default function Home() {
           />
         </div>
       </div>
-      <PortfolioPage/>
+      <PortfolioPage />
+      <AboutMe />
       {/* Footer */}
       <footer className=" border-t-1 py-5 mt-16">
         <div className="container mx-auto px-4 text-center">

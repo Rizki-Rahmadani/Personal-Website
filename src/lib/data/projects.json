@@ -1,0 +1,17 @@
+{
+    "projects": [{
+            "id": 1,
+            "title": "Circle App",
+            "image": "../../../assets/portofolio/circle-app.jpg",
+            "description": "Circle app is a social media platform similar to X, allowing you to create threads, like, comment, and more.",
+            "link": "https://circle-app-frontend.vercel.app/"
+        },
+        {
+            "id": 2,
+            "title": "Lakoe App",
+            "image": "../../../assets/portofolio/lakoe-app.jpg",
+            "description": "Lakoe App is a marketplace platform that makes it easy to manage products, process orders, and configure store information.",
+            "link": "https://lakoe-app-three.vercel.app/login"
+        }
+    ]
+}
