@@ -63,10 +63,10 @@ export default function Home() {
       >
         <div className="w-full md:w-1/2 flex flex-col justify-between text-justify md:text-start sm:text-start gap-5">
           <div className="space-y-3">
-            <p className="text-2xl">Welcome to my world</p>
+            <p className="text-xl md:text-2xl">Welcome to my world</p>
             <div className="space-y-1 font-bold">
-              <h1 className="text-4xl md:text-6xl">Hi, I'm Rizki Rahmadani</h1>
-              <h1 className="text-4xl md:text-6xl ">
+              <h1 className="text-3xl md:text-6xl">Hi, I'm Rizki Rahmadani</h1>
+              <h1 className="text-3xl md:text-6xl ">
                 a{" "}
                 <span className="text-amber-600 ">
                   <span className="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-3 before:bg-amber-600">
@@ -147,7 +147,7 @@ export default function Home() {
                       className="bg-white hover:-translate-y-1 p-0.5 rounded-md"
                     >
                       <IconComponent
-                        className={`w-12 h-12`}
+                        className={`w-8 h-8 md:w-12 md:h-12 `}
                         style={{ color: stack.color }}
                       />
                     </div>
@@ -159,7 +159,7 @@ export default function Home() {
         </div>
 
         <div className="w-full md:w-1/2 h-auto m-10 flex justify-center md:justify-end relative">
-          <div className="absolute w-100 h-100 md:w-140 md:h-140 rounded-full bg-amber-600 -z-10 bottom-1 right-3 sm:-right-1"></div>
+          <div className="absolute w-80 h-80 md:w-140 md:h-140 rounded-full bg-amber-600 -z-10 bottom-1  sm:-right-1"></div>
           {/* <div className="absolute w-100 h-100 md:w-70 md:h-70 rounded-full bg-amber-600 -z-10 top-1 left-50"></div> */}
           <Image
             src="/assets/PP.png"
