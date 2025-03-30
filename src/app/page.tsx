@@ -59,7 +59,7 @@ export default function Home() {
       <Navbar />
       <div
         id=""
-        className="container-full h-screen flex flex-col md:flex-row justify-center items-center px-5 md:px-20 mt-70 sm:mt-0"
+        className="container-full h-screen flex flex-col md:flex-row justify-center items-center px-5 md:px-20 mt-60 sm:mt-0"
       >
         <div className="w-full md:w-1/2 flex flex-col justify-between text-justify md:text-start sm:text-start gap-5">
           <div className="space-y-3">
