@@ -11,7 +11,7 @@ const PortfolioPage = () => {
 
   return (
     <div id="projects" className="portfolio-container">
-      <h1 className="text-4xl font-bold text-center">MY PROJECTS</h1>
+      <h1 className="text-5xl font-bold text-center">MY PROJECTS</h1>
       <div className="flex flex-wrap justify-center gap-10 p-10">
         {projectsData.projects.map((project) => (
           <Card

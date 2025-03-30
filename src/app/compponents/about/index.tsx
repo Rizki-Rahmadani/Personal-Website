@@ -1,14 +1,20 @@
 "use client";
 
+import WhatsAppLink from "@/lib/utilities/whatsapp-link";
 import Image from "next/image";
-import { FaInstagram, FaLinkedin, FaSquareGithub } from "react-icons/fa6";
+import {
+  FaInstagram,
+  FaLinkedin,
+  FaSquareGithub,
+  FaWhatsapp,
+} from "react-icons/fa6";
 import { IoLocationOutline } from "react-icons/io5";
 import { MdMailOutline } from "react-icons/md";
 
 const AboutMe = () => {
   return (
-    <div id="about" className="container-full flex p-20">
-      <div className="w-1/2 flex justify-center">
+    <div id="about" className="container-full flex md:flex-row flex-col-reverse md:p-20 p-10 gap-10 ">
+      <div className="w-full md:w-1/2 flex justify-center">
         <Image
           src="/assets/about-me.jpeg"
           width={500}
@@ -17,9 +23,11 @@ const AboutMe = () => {
           className="rounded-md"
         />
       </div>
-      <div className="w-1/2 py-20 space-y-5 pr-50">
-        <h1 className="text-6xl font-bold">About Me</h1>
-        <p className="text-justify">
+      <div className="w-full md:w-1/2 md:py-20 space-y-5 px-4 md:px-8 lg:px-12">
+        <h1 className="text-center md:text-start text-5xl md:text-4xl lg:text-5xl font-bold w-full ">
+          ABOUT ME
+        </h1>
+        <p className="text-justify w-full md:pr-30">
           Hi! I'm a passionate software developer with expertise in building
           modern web applications. I specialize in React, TypeScript, and
           creating beautiful user interfaces that deliver exceptional user
@@ -44,6 +52,15 @@ const AboutMe = () => {
             <div>
               <h1 className="text-gray-300">Location</h1>
               <p>Tangerang, Indonesia</p>
+            </div>
+          </div>
+          <div className="flex gap-5">
+            <div className="bg-amber-50 opacity-90 w-12 h-12 flex justify-center items-center rounded-md">
+              <FaWhatsapp className="text-amber-600 w-7 h-7" />
+            </div>
+            <div>
+              <h1 className="text-gray-300">Phone</h1>
+              <WhatsAppLink />
             </div>
           </div>
           <div className="space-y-5">
@@ -73,7 +90,7 @@ const AboutMe = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FaSquareGithub size={"50px"} className="text-amber-50"  />
+                  <FaSquareGithub size={"50px"} className="text-amber-50" />
                 </a>
               </div>
             </div>

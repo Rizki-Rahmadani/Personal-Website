@@ -16,6 +16,8 @@ import { TbBrandNextjs, TbBrandTypescript } from "react-icons/tb";
 import { SiExpress, SiPostgresql } from "react-icons/si";
 import { RiTailwindCssLine } from "react-icons/ri";
 import techStackData from "@/lib/data/techStack.json";
+import Map from "./compponents/maps";
+import ContactForm from "./compponents/contact";
 
 export default function Home() {
   const [roleIndex, setRoleIndex] = useState<number>(0);
@@ -57,7 +59,7 @@ export default function Home() {
       <Navbar />
       <div
         id=""
-        className="container-full h-screen flex flex-col md:flex-row justify-center items-center px-5 md:px-20"
+        className="container-full h-screen flex flex-col md:flex-row justify-center items-center px-5 md:px-20 mt-70 sm:mt-0"
       >
         <div className="w-full md:w-1/2 flex flex-col justify-between text-justify md:text-start sm:text-start gap-5">
           <div className="space-y-3">
@@ -85,7 +87,7 @@ export default function Home() {
               </p>
             </div>
             <div className="py-5 gap-5 flex flex-col md:flex-row">
-              <div>
+              {/* <div>
                 <a
                   href="#"
                   onClick={handleHireMe}
@@ -121,7 +123,7 @@ export default function Home() {
                     "Hire Me"
                   )}
                 </a>
-              </div>
+              </div> */}
               <div>
                 <a
                   href="/assets/portofolio/CV_Rizki-Rahmadani.pdf"
@@ -145,7 +147,8 @@ export default function Home() {
                       className="bg-white hover:-translate-y-1 p-0.5 rounded-md"
                     >
                       <IconComponent
-                        className={`w-12 h-12 text-[${stack.color}]`}
+                        className={`w-12 h-12`}
+                        style={{ color: stack.color }}
                       />
                     </div>
                   );
@@ -155,8 +158,8 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-full md:w-1/2 h-auto flex justify-center md:justify-end relative">
-          <div className="absolute w-100 h-100 md:w-140 md:h-140 rounded-full bg-amber-600 -z-10 bottom-1 -right-1"></div>
+        <div className="w-full md:w-1/2 h-auto m-10 flex justify-center md:justify-end relative">
+          <div className="absolute w-100 h-100 md:w-140 md:h-140 rounded-full bg-amber-600 -z-10 bottom-1 right-3 sm:-right-1"></div>
           {/* <div className="absolute w-100 h-100 md:w-70 md:h-70 rounded-full bg-amber-600 -z-10 top-1 left-50"></div> */}
           <Image
             src="/assets/PP.png"
@@ -167,8 +170,25 @@ export default function Home() {
           />
         </div>
       </div>
-      <PortfolioPage />
-      <AboutMe />
+      <div className="mt-70 sm:mt-0">
+        <PortfolioPage />
+      </div>
+      <div>
+        <AboutMe />
+      </div>
+      <div className="px-4 sm:px-6 md:px-8 lg:px-65 space-y-5">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center">
+          CONTACT ME
+        </h1>
+        <div className="border-1 flex flex-col lg:flex-row justify-between p-3 md:p-5 rounded-xl gap-5">
+          <div className="w-full lg:w-[30%]">
+            <ContactForm />
+          </div>
+          <div className="w-full lg:w-[70%] h-[300px] lg:h-auto">
+            <Map />
+          </div>
+        </div>
+      </div>
       {/* Footer */}
       <footer className=" border-t-1 py-5 mt-16">
         <div className="container mx-auto px-4 text-center">
