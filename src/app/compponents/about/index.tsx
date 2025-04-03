@@ -13,7 +13,7 @@ import { MdMailOutline } from "react-icons/md";
 
 const AboutMe = () => {
   return (
-    <div id="about" className="container-full flex xl:flex-row flex-col-reverse md:p-20 p-10 gap-10 ">
+    <div id="about" className="container-full flex xl:flex-row flex-col-reverse md:p-20 px-5 gap-10 ">
       <div className="w-full xl:w-1/2 flex justify-center">
         <Image
           src="/assets/about-me.jpeg"
