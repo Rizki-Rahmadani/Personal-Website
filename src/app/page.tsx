@@ -59,7 +59,7 @@ export default function Home() {
       <Navbar />
       <div
         id=""
-        className="container-full h-screen flex flex-col lg:flex-row justify-center items-center px-5 md:px-20 mt-58 lg:mt-0 md:mt-70"
+        className="container-full h-screen flex flex-col lg:flex-row justify-center items-center px-5 md:px-20 mt-58 lg:mt-0"
       >
         <div className="w-full lg:w-1/2 flex flex-col justify-between text-justify md:text-start sm:text-start gap-5">
           <div className="space-y-3">
@@ -158,8 +158,8 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-full lg:w-1/2 h-auto m-10 flex justify-center lg:justify-end relative">
-          <div className="absolute w-90 h-90 md:w-140 md:h-140 rounded-full bg-amber-600 -z-10 bottom-1 lg:-right-1"></div>
+        <div className="w-full lg:w-1/2 h-auto m-10 flex justify-center 2xl:justify-end relative">
+          <div className="absolute w-90 h-90 2xl:w-140 2xl:h-140 rounded-full bg-amber-600 -z-10 bottom-1 2xl:-right-1"></div>
           {/* <div className="absolute w-100 h-100 md:w-70 md:h-70 rounded-full bg-amber-600 -z-10 top-1 left-50"></div> */}
           <Image
             src="/assets/PP.png"
@@ -170,13 +170,13 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="mt-40 lg:mt-0 md:mt-50 bg-amber-700">
+      <div className="mt-40 lg:mt-0">
         <PortfolioPage />
       </div>
       <div>
         <AboutMe />
       </div>
-      <div className="w-full mt-10 md:mt-0 px-4 sm:px-6 md:px-25 lg:px-20 xl:px-65 space-y-5 bg-green-500">
+      <div className="w-full mt-10 md:mt-0 px-4 sm:px-6 md:px-25 lg:px-20 xl:px-65 space-y-5">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center">
           CONTACT ME
         </h1>

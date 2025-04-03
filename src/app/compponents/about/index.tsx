@@ -23,7 +23,7 @@ const AboutMe = () => {
           className="rounded-md"
         />
       </div>
-      <div className="w-full xl:w-1/2 space-y-5 px-4 md:px-8 lg:px-12 bg-blue-700">
+      <div className="w-full xl:w-1/2 space-y-5 px-4 md:px-8 lg:px-12">
         <h1 className="text-center md:text-start text-5xl md:text-4xl lg:text-5xl font-bold w-full ">
           ABOUT ME
         </h1>
