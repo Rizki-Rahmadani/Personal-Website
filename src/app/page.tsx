@@ -59,7 +59,7 @@ export default function Home() {
       <Navbar />
       <div
         id=""
-        className="container-full h-screen flex flex-col lg:flex-row justify-center items-center px-5 md:px-20 mt-58 lg:mt-0"
+        className="container-full h-screen flex flex-col lg:flex-row justify-center items-center px-5 md:px-20"
       >
         <div className="w-full lg:w-1/2 flex flex-col justify-between text-justify md:text-start sm:text-start gap-5">
           <div className="space-y-3">
@@ -170,7 +170,7 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="mt-40 lg:mt-0">
+      <div className="">
         <PortfolioPage />
       </div>
       <div>
