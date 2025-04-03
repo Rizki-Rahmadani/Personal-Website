@@ -13,8 +13,8 @@ import { MdMailOutline } from "react-icons/md";
 
 const AboutMe = () => {
   return (
-    <div id="about" className="container-full flex md:flex-row flex-col-reverse md:p-20 p-10 gap-10 ">
-      <div className="w-full md:w-1/2 flex justify-center">
+    <div id="about" className="container-full flex xl:flex-row flex-col-reverse md:p-20 p-10 gap-10 ">
+      <div className="w-full xl:w-1/2 flex justify-center">
         <Image
           src="/assets/about-me.jpeg"
           width={500}
@@ -23,11 +23,11 @@ const AboutMe = () => {
           className="rounded-md"
         />
       </div>
-      <div className="w-full md:w-1/2 md:py-20 space-y-5 px-4 md:px-8 lg:px-12">
+      <div className="w-full xl:w-1/2 space-y-5 px-4 md:px-8 lg:px-12 bg-blue-700">
         <h1 className="text-center md:text-start text-5xl md:text-4xl lg:text-5xl font-bold w-full ">
           ABOUT ME
         </h1>
-        <p className="text-justify w-full md:pr-30">
+        <p className="text-justify w-full xl:pr-30">
           Hi! I'm a passionate software developer with expertise in building
           modern web applications. I specialize in React, TypeScript, and
           creating beautiful user interfaces that deliver exceptional user

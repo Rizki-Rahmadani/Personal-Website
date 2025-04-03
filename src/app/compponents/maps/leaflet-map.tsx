@@ -22,7 +22,7 @@ const LeafletMap = () => {
         width: "100%",
         borderRadius: "15px",
       }}
-      className="h-[300px] sm:h-[400px] md:h-[450px] lg:h-[525px]"  
+      className="h-[300px] sm:h-[300px] md:h-[300px] lg:h-[525px]"  
     >
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       <Marker position={position} icon={customIcon}>

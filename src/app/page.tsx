@@ -59,9 +59,9 @@ export default function Home() {
       <Navbar />
       <div
         id=""
-        className="container-full h-screen flex flex-col md:flex-row justify-center items-center px-5 md:px-20 mt-58 sm:mt-0"
+        className="container-full h-screen flex flex-col lg:flex-row justify-center items-center px-5 md:px-20 mt-58 lg:mt-0 md:mt-70"
       >
-        <div className="w-full md:w-1/2 flex flex-col justify-between text-justify md:text-start sm:text-start gap-5">
+        <div className="w-full lg:w-1/2 flex flex-col justify-between text-justify md:text-start sm:text-start gap-5">
           <div className="space-y-3">
             <p className="text-xl md:text-2xl">Welcome to my world</p>
             <div className="space-y-1 font-bold">
@@ -158,8 +158,8 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-full md:w-1/2 h-auto m-10 flex justify-center md:justify-end relative">
-          <div className="absolute w-90 h-90 md:w-140 md:h-140 rounded-full bg-amber-600 -z-10 bottom-1 sm:-right-1"></div>
+        <div className="w-full lg:w-1/2 h-auto m-10 flex justify-center lg:justify-end relative">
+          <div className="absolute w-90 h-90 md:w-140 md:h-140 rounded-full bg-amber-600 -z-10 bottom-1 lg:-right-1"></div>
           {/* <div className="absolute w-100 h-100 md:w-70 md:h-70 rounded-full bg-amber-600 -z-10 top-1 left-50"></div> */}
           <Image
             src="/assets/PP.png"
@@ -170,21 +170,21 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="mt-40 sm:mt-0">
+      <div className="mt-40 lg:mt-0 md:mt-50 bg-amber-700">
         <PortfolioPage />
       </div>
       <div>
         <AboutMe />
       </div>
-      <div className="mt-10 md:mt-0 px-4 sm:px-6 md:px-8 lg:px-65 space-y-5">
+      <div className="w-full mt-10 md:mt-0 px-4 sm:px-6 md:px-25 lg:px-20 xl:px-65 space-y-5 bg-green-500">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center">
           CONTACT ME
         </h1>
         <div className="border-1 flex flex-col lg:flex-row justify-between p-3 md:p-5 rounded-xl gap-5">
-          <div className="w-full lg:w-[30%]">
+          <div className="w-full lg:w-[50%] xl:w-[30%]">
             <ContactForm />
           </div>
-          <div className="w-full lg:w-[70%] h-[300px] lg:h-auto">
+          <div className="w-full lg:w-[50%] xl:w-[70%] h-[300px] lg:h-auto">
             <Map />
           </div>
         </div>
