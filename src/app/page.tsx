@@ -159,7 +159,7 @@ export default function Home() {
         </div>
 
         <div className="w-full lg:w-[30%] h-auto m-10 lg:m-24 2xl:m-30 flex justify-center 2xl:justify-end relative">
-          <div className="absolute w-85 h-85 min-[428px]:w-100 min-[428px]:h-100 md:w-140 md:h-140 lg:w-80 lg:h-80 xl:w-90 xl:h-90 2xl:w-140 2xl:h-140 rounded-full bg-amber-600 -z-10 bottom-1 2xl:-right-1"></div>
+          <div className="absolute w-85 h-85 min-[428px]:w-100 min-[428px]:h-100 md:w-140 md:h-140 lg:w-80 lg:h-80 xl:w-90 xl:h-90 2xl:w-135 2xl:h-135 rounded-full bg-amber-600 -z-10 bottom-1 2xl:-right-1"></div>
           {/* <div className="absolute w-100 h-100 md:w-70 md:h-70 rounded-full bg-amber-600 -z-10 top-1 left-50"></div> */}
           <Image
             src="/assets/PP.png"
