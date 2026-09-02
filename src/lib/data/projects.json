@@ -1,13 +1,27 @@
 {
     "projects": [{
             "id": 1,
+            "title": "App Manage Services",
+            "image": "../../../assets/portofolio/dashboard-app-ms.png",
+            "description": "App Manage Services is a comprehensive platform for managing and optimizing web applications.",
+            "link": "#"
+        },
+        {
+            "id": 2,
+            "title": "Ticketing Management System",
+            "image": "../../../assets/portofolio/ticketing-app.png",
+            "description": "A robust ticketing system for managing and tracking support requests.",
+            "link": "#"
+        },
+        {
+            "id": 3,
             "title": "Circle App",
             "image": "../../../assets/portofolio/circle-app.jpg",
             "description": "Circle app is a social media platform similar to X, allowing you to create threads, like, comment, and more.",
             "link": "https://circle-app-frontend.vercel.app/"
         },
         {
-            "id": 2,
+            "id": 4,
             "title": "Lakoe App",
             "image": "../../../assets/portofolio/lakoe-app.jpg",
             "description": "Lakoe App is a marketplace platform that makes it easy to manage products, process orders, and configure store information.",

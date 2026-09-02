@@ -87,46 +87,9 @@ export default function Home() {
               </p>
             </div>
             <div className="py-5 gap-5 flex flex-col md:flex-row">
-              {/* <div>
-                <a
-                  href="#"
-                  onClick={handleHireMe}
-                  className={`text-xl bg-amber-600 p-2 rounded-lg w-full md:w-auto cursor-pointer hover:bg-white hover:text-amber-600 flex items-center justify-center gap-2 ${
-                    isLoading ? "opacity-50 cursor-not-allowed" : ""
-                  }`}
-                >
-                  {isLoading ? (
-                    <>
-                      <svg
-                        className="animate-spin h-5 w-5 text-white"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                      >
-                        <circle
-                          className="opacity-25"
-                          cx="12"
-                          cy="12"
-                          r="10"
-                          stroke="currentColor"
-                          strokeWidth="4"
-                        ></circle>
-                        <path
-                          className="opacity-75"
-                          fill="currentColor"
-                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                        ></path>
-                      </svg>
-                      <span>Loading...</span>
-                    </>
-                  ) : (
-                    "Hire Me"
-                  )}
-                </a>
-              </div> */}
               <div>
                 <a
-                  href="/assets/portofolio/CV_Rizki-Rahmadani.pdf"
+                  href="/assets/portofolio/CV_Rizki_Rahmadani.pdf"
                   className="text-xl bg-amber-600 p-2 rounded-lg w-full md:w-auto cursor-pointer hover:bg-white hover:text-amber-600 flex items-center justify-center"
                 >
                   Download Resume
@@ -158,15 +121,13 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-full lg:w-[30%] h-auto m-10 lg:m-24 2xl:m-30 flex justify-center 2xl:justify-end relative">
-          <div className="absolute w-85 h-85 min-[428px]:w-100 min-[428px]:h-100 md:w-140 md:h-140 lg:w-80 lg:h-80 xl:w-90 xl:h-90 2xl:w-134 2xl:h-134 rounded-full bg-amber-600 -z-10 bottom-1 2xl:-right-1"></div>
-          {/* <div className="absolute w-100 h-100 md:w-70 md:h-70 rounded-full bg-amber-600 -z-10 top-1 left-50"></div> */}
+        <div className="w-full lg:w-[40%] xl:w-[35%] flex justify-center items-center mt-8 lg:mt-0 lg:ml-10 xl:ml-20">
           <Image
-            src="/assets/PP.png"
+            src="/assets/Profile-2.png"
             width={550}
             height={350}
             alt="Rizki Rahmadani"
-            className="object-cover rounded-full"
+            className="w-full max-w-[350px] sm:max-w-[400px] md:max-w-[450px] lg:max-w-[500px] h-auto object-contain"
           />
         </div>
       </div>
