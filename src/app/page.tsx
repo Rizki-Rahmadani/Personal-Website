@@ -145,7 +145,7 @@ export default function Home() {
           <div className="w-full lg:w-[50%] 2xl:w-[30%]">
             <ContactForm />
           </div>
-          <div className="w-full lg:w-[50%] 2xl:w-[70%] h-[300px] lg:h-auto">
+          <div className="relative z-0 w-full lg:w-[50%] 2xl:w-[70%] h-[300px] lg:h-auto overflow-hidden rounded-[15px]">
             <Map />
           </div>
         </div>
